@@ -1,0 +1,576 @@
+/* ----------------- General settings ----------------- */
+
+*{
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+	box-sizing: border-box; 
+	font-family: 'Open Sans', sans-serif;
+	transition: all 0.1s linear;
+}
+
+html {
+	min-height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+body {
+	padding-bottom: 95px;
+}
+
+h1, h2 {
+	font-family: 'Vollkorn', serif;
+	color: #692433;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+input, textarea {
+	outline-width: 0;
+}
+
+.container {
+	width: 80%;
+	max-width: 1200px;
+	position: relative;
+	margin: auto;
+	padding-left: 70px;
+}
+
+.btn {
+	padding: 8px 25px;
+	border: 0;
+	border-radius: 10px;
+	font-size: 16px;
+}
+
+.nudeRed {
+	background-color: #692433;
+	color: #fff;
+	border: 2px solid #692433;
+	cursor: pointer;
+}
+
+.nudeRed:hover {
+	background-color: #7f4350;
+	border: 2px solid #7f4350;
+}
+
+.outlined {
+	color: #6a6d7b;
+	border: 2px solid #6a6d7b;
+	background: #fff;
+}
+
+.outlined:hover {
+	background-color: #692433;
+	color: #fff;
+	border: 2px solid #692433;
+	cursor: pointer;
+}
+
+.msg {
+	padding: 15px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 350px;
+}
+
+.errors {
+	background-color: #840303;
+}
+
+.ok {
+	background-color: #196904;
+}
+
+.error {
+	border: 1px solid #840303;
+	background-color: #ffdada;
+}
+
+/* ----------------- Login settings ----------------- */
+
+#bgLogin {
+	background: #fff;
+	height: 100vh;
+	width: 100vw;
+}
+
+#bgLogin:before {
+	content: "";
+	background-image: url("../../assets/golf-course.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.3;
+}
+
+#loginCont {
+	max-width: 450px;
+	max-height: 500px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 25px;
+	text-align: center;
+	opacity: 0.
+}
+
+#loginCont img {
+	display: inline-block;
+	width: 50%;
+	margin-top: 40px;
+}
+
+#loginCont h1 {
+	display: block;
+	text-align: center;
+	font-size: 28px;
+	color: #692433;
+	margin-top: 25px;
+}
+
+#loginCont label, #loginCont input {
+	display: inline-block;
+	font-size: 16px;
+}
+
+#loginCont label {
+	margin: 10px 5px 10px 0;
+	font-weight: 700;
+}
+
+#loginCont input[type=text], #loginCont input[type=password] {
+	border: 0;
+	border-bottom: 1px solid #333;
+	padding-left: 5px;
+}
+
+#loginCont input[type=submit] {
+	display: inline-block;
+	margin-top: 25px;
+}
+
+#login {
+	margin-top: 45px;
+}
+
+.blockfield {
+	display: block;
+}
+
+/* ----------------- header settings ----------------- */
+
+nav, #topNav {
+	position: fixed;
+	left: 0;
+}
+
+nav {
+	display: inline-block;
+	background: #6a6d7b;
+	z-index: 99;
+	height: 100vh;
+	top: 114px;
+}
+
+#topNav {
+	width: 100%;
+	background: #f5f5f5;
+	z-index: 999;
+	box-shadow: 0px 0px 5px #ccc;
+	padding: 0 55px 0 25px;
+	top: 0;
+}
+
+#logoCms {
+	display: inline-block;
+}
+
+#logoCms img {
+	width: 200px;
+	padding: 25px;
+}
+
+#userName, #logout {
+	position: absolute;
+	right: 70px;
+	top: 30px;
+	font-size: 16px;
+}
+
+#logout {
+	top: 50px;
+	border-bottom: 1px solid #303030;
+}
+
+#logout:hover {
+	font-weight: bold;
+}
+
+.options {
+	text-align: center;
+	position: relative;
+}
+
+.options:hover {
+	background-color: #692433;
+}
+
+.options a {
+	display: block;
+	height: 100%;
+	color: #fff;
+	transition: all 0.1s linear;
+	padding: 25px;
+}
+
+.label, .fa-users, .fa-edit, .fa-info-circle, .fa-times-circle, .fa-camera, .fa-people-carry, .fa-utensils {
+	display: block;
+}
+
+.label {
+	font-size: 18px;
+	margin-top: 5px;
+}
+
+.fa-users, .fa-edit, .fa-info-circle, .fa-times-circle, .fa-camera, .fa-people-carry, .fa-utensils {
+	font-size: 20px;
+}
+
+/* ----------------- dashboard settings ----------------- */
+
+#dashboard {
+	margin-top: 200px;
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+#dashboard h1, #users h1 {
+	margin-bottom: 20px;
+	font-size: 35px;
+}
+
+#dashboard p {
+	line-height: 35px;
+}
+
+/* ----------------- manage settings ----------------- */
+
+#users, #add {
+	margin-top: 160px;
+}
+
+#users h2 {
+	margin: 70px 0 20px;
+	font-size: 35px;
+}
+
+#manage .options {
+	text-align: center;
+	position: relative;
+	border: 1px solid #9297ae;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+#manage .options:hover {
+	border: 1px solid #692433;
+	background-color: #fff;
+}
+
+#manage .options a, #manage .nUser {
+	display: block;
+	color: #9297ae;
+	transition: all 0.1s linear;
+	padding: 30px 25px 75px;
+}
+
+#manage .options a:hover, #manage .nUser:hover {
+	color: #692433;
+}
+
+/*user mgn*/
+#user .options p {
+	margin-top: 5px;
+}
+
+#manage .nUser {
+	padding: 0;
+}
+
+#manage #users .msg {
+    left: auto;
+}
+
+.fa-user, .fa-user-plus, .fa-edit, .fa-plus-circle {
+	font-size: 40px;
+}
+
+.fa-user-plus, .fa-plus-circle
+{
+	color: #fff;
+}
+
+.addCont:hover .fa-user-plus, .addCont:hover .fa-plus-circle, .addCont:hover .label
+{
+	color: #692433;
+}
+
+#manage .options .optBt {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+}
+
+#manage .options .optBt a {
+	display: inline-block;
+    height: auto;
+    margin: 0 10px;
+    padding: 0;
+}
+
+#manage .options .optBt a.delete, #manage .options .optBt a.add {
+	background-color: #fff;
+	padding: 5px;
+	margin: 0;
+	display: block;
+	color: #692433;
+	width: 100%;
+	border: 1px solid #692433;
+}
+
+#manage .options .optBt a.delete:hover {
+	background-color: #692433;
+	color: #fff;
+}
+
+.addCont {
+	background-color: #692433;
+}
+
+.addCont .label {
+	color: #fff;
+}
+
+.addCont .add {
+	border: 0;
+	background-color: #fff;
+	color: #692433;
+}
+
+.addCont .optBt:hover {
+	background-color: #692433;
+	color: #fff;
+}
+
+/*infos mgn*/
+#infos {
+	width: 100%;
+	display: inline-block;
+	text-align: left;
+}
+
+#infos .blockfield {
+	margin: 25px 0;
+	float: left;
+}
+
+#infos .contact input, #infos .address input {
+	display: block;
+	font-size: 16px;
+	width: 100%;
+	margin-bottom: 5px;
+	padding: 6px;
+}
+
+#infos .contact {
+	display: inline-block;
+	font-size: 16px;
+	width: 48%;
+	margin-right: 10px;
+}
+
+#infos .address {
+	display: inline-block;
+	font-size: 16px;
+	width: 100%;
+	margin-right: 10px;
+}
+
+#infos label {
+	display: block;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+#infos .btn {
+	padding: 8px 55px;
+}
+
+/*Gallery mgn*/
+.bgCont {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	overflow: hidden;
+}
+
+.photo {
+	display: inline-block;
+	margin: 5px;
+	width: 200px;
+	height: 170px;
+	overflow: hidden;
+	position: relative;
+}
+
+.photo label {
+	text-align: center;
+	width: 180px;
+	font-weight: bold;
+	margin-bottom: 9px;
+	display: inline-block;
+	font-size: 19px;
+	color: #692433;
+}
+
+.photo img {
+	width: 200px;
+}
+
+.photo .fa-times-circle {
+	position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 22px;
+    color: #ff4141;
+}
+
+.photo .fa-times-circle:hover {
+    color: #ff0000;
+}
+
+.photo .btn {
+	padding: 5px 70px;
+}
+
+.deletePhoto {
+	display: inline-block;
+}
+
+input[type=text], input[type=password] {
+	width: 180px;
+	border: 0;
+	border: 1px solid #303030;
+	padding: 8px 5px;
+}
+
+input[type=file] {
+	cursor: pointer;
+	width: 180px;
+	height: 34px;
+	overflow: hidden;
+	margin: 9px 0;
+}
+
+input[type=file]:before {
+	width: 158px;
+	height: 30px;
+	font-size: 15px;
+	line-height: 31px;
+	content: 'Upload Photo';
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #692433;
+	padding: 0 10px;
+	text-align: center;
+	color: #692433;
+}
+
+input[type=file]:hover:before {
+	background: #7f4350;
+	color: #fff;
+}
+
+input[type=file]::-webkit-file-upload-button {
+	visibility: hidden;
+}
+
+/* ----------------- add/edit settings ----------------- */
+
+#add h1 {
+	margin-bottom: 30px;
+}
+
+#add .blockfield {
+	width: 49%;
+	padding-right: 25px;
+	float: left;
+	display: inline-block;
+	margin: 15px 0;
+}
+
+#add label {
+	font-size: 20px;
+	font-weight: 600;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#add input[type=text], #add input[type=password] {
+	font-size: 16px;
+	text-align: left;
+	width: 100%;
+	border: 1px solid #aaa;
+	padding: 8px 5px;
+}
+
+#add input[type=submit] {
+	padding: 8px 55px;
+	display: block;
+	clear: both;
+}
+
+/* ----------------- footer settings ----------------- */
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #f5f5f5;
+	text-align: center;
+	color: #303030;
+	padding: 15px;
+}
+
+/* ----------------- Responsive settings ----------------- */
+
+@media only screen and (max-width: 530px) 
+{
+	
+}
