@@ -3,14 +3,20 @@ include ("../classes/connect.php");
 
 if(($_GET["area"] == "users"))
 {
+
+$hashpass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
 	if($_POST["id"])
 	{
 		$sql = "UPDATE
 					users
 				SET
 					strUsername = '".$_POST["username"]."',
-					strPassword = '".$_POST["password"]."'
-				WHERE id=".$_POST["id"]."";
+					strPassword = '".$hashpass."',
+					strName = '".$_POST["name"]."',
+					strEmail = '".$_POST["email"]."',
+					nPhone = '".$_POST["phone"]."'
+				WHERE id=".$_POST["id"];
 
 		Connect::runSql("saveData", $sql);
 		header("location: ../manage.php?edit=true&area=users");
@@ -18,10 +24,16 @@ if(($_GET["area"] == "users"))
 	{
 		$sql = "INSERT INTO users 
 			(strUsername, 
-			strPassword) 
+			strPassword,
+			strName,
+			strEmail,
+			nPhone) 
 		VALUES (
 			'".$_POST["username"]."',
-			'".$_POST["password"]."')";
+			'".$hashpass."',
+			'".$_POST["name"]."',
+			'".$_POST["email"]."',
+			'".$_POST["phone"]."')";
 		Connect::runSql("saveData", $sql);
 		header("location: ../manage.php?add=true&area=users");
 	}
@@ -60,7 +72,7 @@ if(($_GET["area"] == "infos"))
 	$sql = "UPDATE
 				globals
 			SET
-				strDetails = '".$_POST["postal code"]."'
+				strDetails = '".$_POST["postalcode"]."'
 			WHERE id=9";
 	Connect::runSql("saveData", $sql);
 	

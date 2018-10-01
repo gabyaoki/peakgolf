@@ -4,7 +4,6 @@ include ("models/checkUser.php");
 include ("views/header.php"); 
 $_GET["area"] = (isset($_GET["area"]))?$_GET["area"]:"";
 ?>
-
 <section id="manage" class="container">
 	<div id="users">
 	<?php
@@ -18,12 +17,12 @@ $_GET["area"] = (isset($_GET["area"]))?$_GET["area"]:"";
 			<h1>Manage Users</h1>
 
 			<div class="options addCont">
-				<a href="models/add.php?area=users">
+				<a href="add.php?area=users">
 					<span class="fas fa-user-plus"></span>
 					<span class="label">New User</spasn>
 				</a>
 				<div class="optBt">	
-					<a class="add" href="models/add.php?area=users">Add</a>	
+					<a class="add" href="add.php?area=users">Add</a>	
 				</div><!-- //optBt -->
 			</div><!-- //options -->
 
@@ -33,7 +32,7 @@ $_GET["area"] = (isset($_GET["area"]))?$_GET["area"]:"";
 		?>
 			<div class="options">
 				<div class="nUser">
-					<a class="edit" href="models/add.php?id=<?=$user['id']?>&amp;area=users">
+					<a class="edit" href="add.php?id=<?=$user['id']?>&amp;area=users">
 						<span class="fas fa-user"></span>
 						<p class="label">Edit <?=$user["strUsername"]?></p>
 					</a>
@@ -67,7 +66,7 @@ $_GET["area"] = (isset($_GET["area"]))?$_GET["area"]:"";
 				<label>Address:</label>
 				<input type="text" class="required" name="address" placeholder="name" value="<?=Connect::getGlobals('address')?>" />
 				<input type="text" class="required" name="city" placeholder="phone" value="<?=Connect::getGlobals('city')?>" />
-				<input type="text" class="required" name="postal code" placeholder="i.e. V6G 1S8" value="<?=Connect::getGlobals('postal code')?>" />
+				<input type="text" class="required" name="postalcode" placeholder="i.e. V6G 1S8" value="<?=Connect::getGlobals('postal code')?>" />
 			</div><!--//blockfield-->
 
 			<input class="btn nudeRed" type="submit" value="Save" />
@@ -114,12 +113,12 @@ $_GET["area"] = (isset($_GET["area"]))?$_GET["area"]:"";
 		<h1>Manage Main Services</h1>
 		
 		<div class="options addCont">
-			<a href="models/add.php?area=services">
+			<a href="add.php?area=services">
 				<span class="fas fa-plus-circle"></span>
 				<span class="label">New Service</spasn>
 			</a>
 			<div class="optBt">	
-				<a class="add" href="models/add.php?area=services">Add</a>	
+				<a class="add" href="add.php?area=services">Add</a>	
 			</div><!-- //optBt -->
 		</div><!-- //options -->
 	<?php
@@ -128,7 +127,7 @@ $_GET["area"] = (isset($_GET["area"]))?$_GET["area"]:"";
 		?>
 			<div class="options">
 				<div class="nUser">
-					<a class="edit" href="models/add.php?id=<?=$mainService['id']?>&amp;area=services">
+					<a class="edit" href="add.php?id=<?=$mainService['id']?>&amp;area=services">
 						<span class="fas fa-edit"></span>
 						<p class="label">Edit <?=$mainService["strName"]?></p>
 					</a>

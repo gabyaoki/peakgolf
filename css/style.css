@@ -16,7 +16,7 @@ html {
 }
 
 body {
-	padding-bottom: 53px;
+	padding-bottom: 95px;
 }
 
 h1, h2 {
@@ -211,11 +211,20 @@ nav {
 	padding: 25px;
 }
 
-#userName {
+#userName, #logout {
 	position: absolute;
 	right: 70px;
-	top: 40px;
-	font-size: 19px;
+	top: 30px;
+	font-size: 16px;
+}
+
+#logout {
+	top: 50px;
+	border-bottom: 1px solid #303030;
+}
+
+#logout:hover {
+	font-weight: bold;
 }
 
 .options {
@@ -307,6 +316,10 @@ nav {
 
 #manage .nUser {
 	padding: 0;
+}
+
+#manage #users .msg {
+    left: auto;
 }
 
 .fa-user, .fa-user-plus, .fa-edit, .fa-plus-circle {
@@ -469,7 +482,7 @@ nav {
 	display: inline-block;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
 	width: 180px;
 	border: 0;
 	border: 1px solid #303030;
@@ -509,15 +522,17 @@ input[type=file]::-webkit-file-upload-button {
 
 /* ----------------- add/edit settings ----------------- */
 
-#add .blockfield {
-	margin: 25px 0;
-}
-
 #add h1 {
 	margin-bottom: 30px;
 }
 
-/*users*/
+#add .blockfield {
+	width: 49%;
+	padding-right: 25px;
+	float: left;
+	display: inline-block;
+	margin: 15px 0;
+}
 
 #add label {
 	font-size: 20px;
@@ -527,72 +542,17 @@ input[type=file]::-webkit-file-upload-button {
 }
 
 #add input[type=text], #add input[type=password] {
-	padding-left: 5px;
 	font-size: 16px;
-	text-align: center;
+	text-align: left;
+	width: 100%;
+	border: 1px solid #aaa;
+	padding: 8px 5px;
 }
 
 #add input[type=submit] {
-	margin-top: 15px;
-}
-
-/*tracks*/
-#addMix, #addNew {
-	width: 60%;
-	margin: auto;
-	text-align: left;
-}
-
-#addMix input[type=text], #addNew input[type=text] {
-	text-align: left;
-}
-
-#addMix input[type=file] {
-	margin: 0;
-}
-
-#addMix input[name=strName] {
-	width: 85%;
-}
-
-#addMix input[type=file]:before {
-	width: 158px;
-	height: 30px;
-	font-size: 15px;
-	line-height: 31px;
-	content: 'Upload File';
-	display: inline-block;
-	background: #fff;
-	border: 1px solid #7026c2;
-	padding: 0 10px;
-	text-align: center;
-	color: #7026c2;
-}
-
-.duoField {
-	width: 45%;
-	display: inline-block;
-	margin-right: 15px;
-}
-
-.mixes .fa-edit {
-	color: #000;
-	left: auto;
-    right: 5px;
-}
-
-.mixes .fa-edit:hover {
-	color: #353535;
-}
-
-/*News*/
-#addNew input[name=strTitle], #addNew textarea {
-	width: 100%;
-}
-
-#addNew textarea {
-	padding: 5px;
-	height: 150px;
+	padding: 8px 55px;
+	display: block;
+	clear: both;
 }
 
 /* ----------------- footer settings ----------------- */

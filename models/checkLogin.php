@@ -1,18 +1,16 @@
 <?php 
-include ("../classes/connect.php"); 
-session_start();
+include("../classes/connect.php");
 
-$sql = "SELECT * FROM users WHERE strUsername='".$_POST["username"]."' AND strPassword='".$_POST["password"]."'";
-$arrUsers = Connect::runSql("getData", $sql);
+$sql = "SELECT * FROM users WHERE strUsername='".$_POST["username"]."'";
+$arrLoggedUser = Connect::runSql("singleData", $sql);
 
-if(isset($arrUsers))
-{
-	$_SESSION["userID"] = $arrUsers[0]["id"];
+$passHash = $arrLoggedUser["strPassword"];
+
+if(password_verify($_POST["password"], $passHash)){
+	session_start();
+	$_SESSION["userID"] = $arrLoggedUser["id"];
 	header("location: ../dashboard.php");
-} 
-else {
-	header("location: index.php?error=true");
-	die;
+} else {
+	header("location: ../index.php?error=true");
 }
-	
 ?>

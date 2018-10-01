@@ -23,6 +23,7 @@ $logUser = Connect::runSql("singleData", $sql);
         <div id="topNav">
             <a id="logoCms" href="dashboard.php"><img src="../images/logo.png" alt="logo" /></a>
             <a id="userName" href="dashboard.php">Logged as <?=$logUser['strName']?></a>
+            <a id="logout" href="models/logout.php">Logout</a>
         </div><!--//container-->
 
         <nav>
