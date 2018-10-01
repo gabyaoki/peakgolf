@@ -18,32 +18,20 @@
         <div class="container">
             <a id="logo" href="index.php"><img src="images/<?=Connect::getGlobals('logo')?>" alt="logo" /></a>
             <!--get logo from DB-->
-            <nav>
-                <div class="phone topPhone">
-                    <p><?=Connect::getGlobals('phone')?></p>
-                </div><!--//phone-->
-
-                <ul>
-                <?php
-                    $arrAllPages = Connect::runSql("getData","SELECT * FROM pages WHERE bMainPage=1"); //get all data from table pages
-                    foreach($arrAllPages as $page)
-                    {
-                        $activeSt = "";
-                        if($nPageID == $page['id'])
-                        {
-                            $activeSt = "active";
-                            //add the class active is page id is the same as GET(nPageID)
-                        }
-                ?>
-                    <li><a class="<?=$activeSt?>" href="index.php?nPageID=<?=$page['id']?>"><?=$page["strNav"]?></a></li>  
-                    <!--for each data from column "strNav" put inside an li and add the "id" to the link, so we know which page it is talking-->
-                <?php
-                    }
-                ?>
-                </ul>
-            </nav><!--//nav-->
+           <?php
+           include("views/nav_open.php");
+           include("views/nav_hamb.php");
+           ?>
+            <div id="socialNav">
+                <a href="http://facebook.com/<?=Connect::getGlobals('facebook')?>"><img src="images/facebook.png" alt="<?=Connect::getGlobals('facebook')?>" /></a>
+                <a href="http://instagram.com/<?=Connect::getGlobals('instagram')?>"><img src="images/instagram.png" alt="<?=Connect::getGlobals('instagram')?>" /></a>
+                <a href="http://twitter.com/<?=Connect::getGlobals('twitter')?>"><img src="images/twitter.png" alt="<?=Connect::getGlobals('twitter')?>" /></a>
+                <a href="http://youtube.com/<?=Connect::getGlobals('youtube')?>"><img src="images/youtube.png" alt="<?=Connect::getGlobals('youtube')?>" /></a>
+                <a href="#"><img src="images/email.png" alt="<?=Connect::getGlobals('email')?>" /></a>
+            </div><!-- socialNav -->
         </div><!--//container-->
     </header><!--//header-->
+
     <section id="heroImg" class="bgCont contentWrap">
         <img class="bgImg" src="assets/<?=$arrPage['strHeroImg']?>" alt="<?=$arrPage['strHeroImg']?>" />
     </section><!-- Hero img -->
