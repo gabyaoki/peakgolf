@@ -1,2 +1,4 @@
-# week_4_project
-Vanarts Project Mockup
+# Missing parts:
+- Resposivi hero img
+... Put text at the hero img
+- Comment
