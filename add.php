@@ -82,15 +82,7 @@ if(($_GET["area"] == "services"))
 	}
 ?>
 	<h1><?=$title?></h1>
-	<form id="addUser" method="post" action="models/save.php?area=services" onsubmit="return validateForm();"  autocomplete="off">
-		<input type="hidden" name="id" value="<?=$id?>" />
-		<div class="blockfield">
-			<label>Username</label>
-			<input type="text" class="required" name="username" placeholder="i.e. johndoe" value="<?=$username?>" />
-		</div><!--//blockfield-->
-
-		<input class="btn nudeRed" type="submit" value="Save" />
-	</form>
+	<p>Please, call our support to unlock this feature.</p>
 <?php
 }
 ?>

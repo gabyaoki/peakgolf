@@ -4,15 +4,13 @@ include ("../classes/connect.php");
 if(($_GET["area"] == "users"))
 {
 
-$hashpass = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
 	if($_POST["id"])
 	{
 		$sql = "UPDATE
 					users
 				SET
 					strUsername = '".$_POST["username"]."',
-					strPassword = '".$hashpass."',
+					strPassword = '".$_POST['password']."',
 					strName = '".$_POST["name"]."',
 					strEmail = '".$_POST["email"]."',
 					nPhone = '".$_POST["phone"]."'
@@ -30,7 +28,7 @@ $hashpass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 			nPhone) 
 		VALUES (
 			'".$_POST["username"]."',
-			'".$hashpass."',
+			'".$_POST['password']."',
 			'".$_POST["name"]."',
 			'".$_POST["email"]."',
 			'".$_POST["phone"]."')";
