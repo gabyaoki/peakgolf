@@ -1,0 +1,6 @@
+http://gabrielleaoki.com/peakgolf/
+http://gabrielleaoki.com/peakgolf/admin/
+user: admin
+password: 1234
+
+https://github.com/gabyaoki/week_4_project
