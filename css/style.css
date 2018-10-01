@@ -1,0 +1,762 @@
+/*
+font-family: 'Encode Sans Condensed', sans-serif;
+font-family: 'Vollkorn', serif;
+font-family: 'Open Sans', sans-serif;
+
+Blue gray: #9297ae;
+Dark blue gray: #6a6d7b;
+Dark gray: #303030;
+Nude red: #692433;
+Light nude red: #7f4350;
+*/
+
+/*general style*/
+*{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none; 
+}
+
+html {
+	min-height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+body {
+	padding-bottom: 294px;
+}
+
+h1, h2 {
+	font-family: 'Vollkorn', serif;
+	font-weight: normal;
+}
+
+h3 {
+	letter-spacing: 1px;
+	font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1200px;
+	width: 85%;
+	margin: auto;
+	position: relative;
+}
+
+.contentWrap {
+	position: relative;
+	margin-top: 140px;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.btn {
+	padding: 8px 25px;
+	border: 0;
+	border-radius: 10px;
+	font-size: 16px;
+}
+
+.nudeRed {
+	background-color: #692433;
+	color: #fff;
+	border: 2px solid #692433;
+	cursor: pointer;
+}
+
+.nudeRed:hover {
+	background-color: #7f4350;
+	border: 2px solid #7f4350;
+}
+
+.outlined {
+	background-color: #fff;
+	color: #6a6d7b;
+	border: 2px solid #6a6d7b;
+}
+
+.outlined:hover {
+	background-color: #692433;
+	color: #fff;
+	border: 2px solid #692433;
+	cursor: pointer;
+}
+
+.lineDec {
+	width: 100%;
+	display: inline-block;
+	opacity: 0.6;
+	margin: 35px 0;
+}
+
+ .lineDec hr {
+	width: 40%;
+	display: inline-block;
+	float: left;
+	margin: 3px 0;
+}
+
+.lineDec img {
+	width: 5%;
+	margin: 0 6%;
+	display: inline-block;
+	float: left;
+}
+
+/*header style*/
+header {
+	background-color: #f5f5f5;
+	box-shadow: 0px 0px 5px #666;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+nav {
+	display: inline-block;
+	position: absolute;
+    right: 0;
+    top: 70px;
+}
+
+nav li {
+	float: left;
+}
+
+nav a {
+	color: #303030;
+	display: block;
+	font-size: 18px;
+	margin-left: 25px;
+	letter-spacing: 1px;
+	padding: 5px 8px;
+	font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+nav li:last-child a {
+	font-weight: bold;
+	color: #303030;
+	border: 2px solid #6a6d7b;
+}
+
+nav a:hover {
+	color: #692433;
+	font-style: italic;
+	font-weight: bold;
+}
+
+nav li:last-child a:hover {
+	font-style: normal;
+	color: #fff;
+	border: 2px solid #692433;
+	background-color: #692433;
+}
+
+#logo {
+	display: inline-block;
+	padding: 30px 0;
+	width: 30%;
+}
+
+#logo img {
+	width: 80%;
+}
+
+.topPhone {
+	text-align: right;
+	margin-bottom: 15px;
+}
+
+.phone p {
+	display: inline-block;
+	color: #303030;
+	font-size: 20px;
+}
+
+.active {
+	border-bottom: 2px solid #692433;
+}
+
+.activeSub {
+	filter: brightness(1.3);
+}
+
+/*contact section*/
+.contact {
+	overflow: auto;
+}
+
+.contactDiv {
+	width: 49%;
+	float: left;
+	display: inline-block;
+	margin-bottom: 25px;
+}
+
+.contactServ {
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	padding-right: 35px;
+	color: #303030;
+	margin-top: 25px;
+}
+
+.servSummary {
+	float: left;
+	margin: 15px 0;
+}
+
+.servSummary img {
+	width: 50px;
+	padding-right: 10px;
+	opacity: 0.8;
+}
+
+.error {
+	border: 1px solid #ff0000;
+	background-color: #fff5f5 !important;
+}
+
+.fieldModal {
+	margin: 20px 0;
+}
+
+.fieldModal label {
+	display: block;
+	margin: 8px 0;
+	color: #6a6d7b;
+	font-size: 18px;
+}
+
+.fieldModal input, .fieldModal select {
+	display: inline-block;
+	width: 100%;
+	padding: 8px;
+	outline-width: 0;
+	background-color: #fff;
+}
+
+input, select, textarea {
+	border: 0;
+	border: 1px solid #bbb;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	  -webkit-appearance: none; 
+	  margin: 0; 
+}
+
+.fieldModal input[type="submit"]#submitForm,.fieldModal textarea {
+	outline-width: 0;
+}
+
+.fieldModal textarea {
+	display: block;
+	width: 100%;
+	padding: 8px;
+	height: 100px;
+}
+
+.alertMsg {
+	margin: 15px 0;
+	padding: 10px;
+	position: relative;
+	display: none;
+	color: #fff;
+	text-align: center;
+}
+
+.register {
+	padding-left: 35px;
+	height: 690px;
+	overflow: hidden;
+}
+
+.register .bgCont {
+	height: 100%;
+}
+
+
+/*Home Style*/
+#heroImg {
+	height: 450px;
+}
+
+#quote {
+	display: block;
+	margin: 25px auto 0;
+	max-width: 700px;
+	text-align: center;
+}
+
+#quoteText {
+	font-family: 'Vollkorn', serif;
+	font-size: 25px;
+	color: #303030;
+}
+
+#quote .btn {
+	display: inline-block;
+	margin: 25px;
+	font-weight: bold;
+	padding: 8px 30px;
+	font-size: 18px;
+}
+
+
+/*Social Media Gallery*/
+#titleInsta, #titleContact, #titleVideo {
+	display: block;
+	text-align: center;
+	margin: 25px 0;
+	font-size: 35px;
+	color: #303030;
+}
+
+#titleInsta a{
+	color: #692433;
+	font-family: 'Vollkorn', serif;
+	font-size: 35px;
+}
+
+#video {
+	overflow: auto;
+	display: inline-block;
+}
+
+.instaWrap {
+	display: inline-block;
+	width: 30%;
+	height: 270px;
+	float: left;
+	margin: 10px;
+	overflow: hidden;
+}
+
+.bgCont {
+	width: 100%;
+	height: 230px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 1;
+}
+
+.bgImg {
+	height: 100%;
+}
+
+.instaDesc {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 8px;
+	color: #9297ae;
+}
+
+.instaWrap .bgCont {
+	opacity: 0.8;
+	filter: grayscale(0.5);
+}
+
+.instaWrap:hover .bgCont {
+	opacity: 1;
+	filter: grayscale(0);
+}
+
+.instaWrap:hover .instaDesc {
+	color: #6a6d7b;
+	font-weight: bold;
+}
+
+.gallery {
+	overflow: auto;
+}
+
+.videoDiv {
+	margin: 25px 10px 55px;
+	float: left;
+	display: inline-block;
+	width: 47%;
+	height: 400px;
+}
+
+
+
+/*Services Style*/
+#subNav {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 25px;
+	margin-top: -55px;
+}
+
+#subNav a {
+	display: block;
+	float: left;
+	width: 33%;
+	background-color: #7f4350;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Encode Sans Condensed', sans-serif;
+	letter-spacing: 1px;
+}
+
+#subNav a:hover {
+	background-color: #692433;
+}
+
+.textAbout {
+	column-count: 2;
+    column-gap: 100px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    margin: 55px 0 95px;
+}
+
+.coverPhoto, .coverPhotoSub {
+	margin: 35px 0 0;
+	height: 450px;
+	background-image: url("../assets/pastel-wedding-1.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.coverPhotoSub {
+	background-image: url("../assets/BridalShower-34.jpg");
+}
+
+.testimonial {
+	margin: 55px 0 10px;
+	display: inline-block;
+	width: 100%;
+}
+
+.textImg.textOne {
+	width: 45%;
+	display: inline-block;
+	float: left;
+	padding-right: 8%;
+}
+
+.textOne h2 {
+	font-size: 28px;
+}
+
+.textOne p {
+	font-size: 16px;
+    line-height: 30px;
+    margin: 15px 0;
+}
+
+.textImg.bgCont {
+	width: 40%;
+	height: 350px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	overflow: hidden;
+	float: right;
+	display: inline-block;
+}
+
+.textImg .bgImg {
+	width: 100%;
+}
+
+
+/*Social Media Gallery*/
+.menu h2 {
+	display: inline-block;
+	font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.menu h3 {
+	color: #692433;
+}
+
+.menu h4 {
+	font-size: 18px;
+	margin-top: 15px;
+}
+
+.menu .textImg.textOne {
+	margin-right: 40px;
+	min-height: 250px;
+}
+
+.menu .textImg.textOne p {
+	margin-right: 40px;
+}
+
+.menu .textImg.textOne .price {
+	font-size: 15px;
+	font-weight: bold;
+	float: right;
+	margin-left: 25px;
+}
+
+.menu .textImg.bgCont {
+	float: left;
+	margin-bottom: 40px;
+}
+
+
+
+/*footer style*/
+footer {
+	background-color: #f5f5f5;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+#footerDetails {
+	display: inline-block;
+	width: 24%;
+	float: left;
+}
+
+#logoFooter {
+	padding: 25px 0 15px;
+	display: inline-block;
+}
+
+#logoFooter img {
+	width: 170px;
+}
+
+#gMap {
+	display: inline-block;
+	width: 75%;
+	height: 231px;
+	float: right;
+}
+
+.textFooter {
+	color: #303030;
+	letter-spacing: 1px;
+	font-size: 16px;
+	font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.email {
+	margin: 15px 0 25px;
+}
+
+.copy {
+	text-align: center;
+	margin: 20px 0;
+	display: inline-block;
+	width: 100%;
+	color: #6a6d7b;
+}
+
+
+/*Responsive*/
+@media only screen and (max-width: 1175px) {
+	nav {
+		top: 40px;
+	}
+
+	.menu .textImg.bgCont {
+		min-height: 280px;
+		margin-bottom: 30px;
+	}
+} 
+
+@media only screen and (max-width: 910px) {
+	#footerDetails {
+		width: 32%;
+	}
+
+	#gMap {
+		width: 65%;
+	}
+
+	.contentWrap {
+		margin-top: 120px;
+	}
+
+	.servSummary {
+		float: none;
+	}
+
+	.bgCont {
+		height: 200px;
+	}
+
+	.menu .textImg.textOne {
+		min-height: 200px;
+		width: 100%;
+	}
+
+	.menu .textImg.bgCont {
+		float: none;
+	}
+} 
+
+@media only screen and (max-width: 840px) {
+	.media .instaWrap {
+		width: 45%;
+	}
+
+	.media .videoDiv {
+		width: 100%;
+		margin: 25px 0px 55px;
+	}
+}
+
+@media only screen and (max-width: 755px) {
+	.textAbout {
+		column-count: 1;
+		column-gap: 0;
+	}
+
+	.textImg.textOne {
+	    width: 100%;
+	    float: none;
+	    padding-right: 0;
+	    margin-bottom: 25px;
+	}
+
+	.textImg.bgCont {
+		width: 100%;
+		float: none;
+	}
+} 
+
+@media only screen and (max-width: 660px) {
+	body {
+		padding-bottom: 412px;
+	}
+
+	#quoteText {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	#quote .btn {
+		margin: 25px 15px;
+		padding: 6px 20px;
+		font-size: 16px;
+	}
+
+	#titleInsta, #titleContact, #titleInsta a, #titleVideo {
+		margin: 0;
+		font-size: 28px;
+	}
+
+	#footerDetails {
+		width: 100%;
+		padding-top: 15px;
+	}
+
+	#logoFooter {
+		padding: 15px 0;
+		float: left;
+	}
+
+	#gMap {
+		width: 100%;
+		height: 190px;
+		margin-bottom: 25px;
+	}
+
+	.contentWrap {
+		margin-top: 90px;
+	}
+
+	.contactDiv {
+		width: 100%;
+		float: none;
+	}
+
+	.contactServ {
+		text-align: center;
+	}
+
+	.lineDec img {
+		width: 9%;
+		margin: 0 4%;
+	}
+
+	.instaWrap {
+		width: 44%;
+		margin: 10px;
+	}
+
+	.instaDesc {
+		font-size: 15px;
+	}
+
+	.textFooter {
+		text-align: right;
+	}
+
+	.media .instaWrap {
+		width: 100%;
+		height: 240px;
+	}
+
+} 
+
+@media only screen and (max-width: 540px) {
+	#subNav {
+	    width: 100%;
+	    margin-bottom: 0;
+	    margin-top: -120px;
+	}
+
+	#subNav a {
+	    width: 100%;
+	    float: none;
+	    margin: 2px 0;
+	}
+
+	.textAbout {
+		margin: 45px 0 65px;
+	}
+
+	.media .videoDiv {
+		height: 290px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	body {
+		padding-bottom: 536px;
+	}
+
+	#footerDetails, .textFooter {
+		text-align: center;
+	}
+
+	#logoFooter {
+		float: none;
+	}
+
+	.instaWrap {
+		height: 230px;
+		width: 100%;
+	}
+
+	.media .videoDiv {
+		height: 200px;
+	}
+} 
